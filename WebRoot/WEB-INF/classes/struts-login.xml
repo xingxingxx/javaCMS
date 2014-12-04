@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+    
+<struts>
+	<package name="login" namespace="/login"
+		extends="homeCommon">
+		<!-- 跳转到登录页面的Action -->
+		<action name="toLogin">
+			<result name="success">
+				/WEB-INF/cms/login.jsp
+			</result>
+		</action>
+		<!-- 登录Action -->
+		<action name="login" 
+			class="action.login.LoginAction">
+			<result name="ok" type="redirectAction" >
+				<param name="namespace">/cms</param>
+				<param name="actionName">manage</param>
+			</result>
+			<result name="fail">
+				/WEB-INF/cms/login.jsp
+			</result>
+		</action>
+		<!-- 生成验证码Action -->
+		<action name="createImage"
+			class="action.login.CreateImageAction">
+			<result name="success" type="stream">
+				<param name="inputName">imageStream</param>
+			</result>
+		</action>
+	</package>
+</struts>

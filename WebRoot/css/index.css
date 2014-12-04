@@ -1,0 +1,144 @@
+@charset "utf-8";
+#slide{
+	width:960px;
+	height:320px;
+	margin:0 auto;
+	overflow:hidden;
+	position:relative;
+	}
+.adv,.num{
+	position:absolute;
+	}
+.adv li{
+		float: left;
+		width:960px;
+		height:320px;
+	}
+.num{
+	right:10px;
+	bottom:5px;
+	}
+	
+.on{
+		background-color:#0a7ac4 !important;
+		border:1px solid #0a7ac4 !important;	
+	}
+.num li{
+		float: left;
+		background-color:#fff;
+		border:1px solid #ccc;	
+		width: 10px;
+		height: 10px;
+		-moz-border-radius: 5px; 
+        -webkit-border-radius: 5px; 
+        border-radius: 5px; 
+		cursor: pointer;
+		margin: 3px 2px;
+	}
+#content{
+	width:960px;
+	margin:auto;
+	margin-top:15px;
+	}
+	
+.list{
+	float:left;
+	margin-right:17px;
+	width:225px;
+	height:290px;
+	border:1px solid #ccc;
+	}
+
+.title{
+	font-size:16px;
+	font-weight:bold;
+	color:#0a7ac4;
+	line-height:35px;
+	padding-left:10px;
+	border-bottom:1px solid #ccc;
+	}	
+.image{
+	width:225px;
+	height:100px;
+	}
+	
+.tl{
+	height:255px;
+	}
+
+.tl ul li{
+	padding-left:25px;
+	line-height:28px;
+	font-size:13px;
+	color:#505050;
+	background: url(../image/icon/icon2.gif) no-repeat 10px;
+	
+	}		
+.more{
+	margin-left:135px;
+	font-size:13px;
+	line-height:35px;
+	}
+.more a:link,.more a:visited{color: #0a7ac4;}
+.more a:hover,.more a:active {color: #9a2d0f;}
+.more2{
+	margin-left:135px;
+	font-size:13px;
+	line-height:35px;
+	}
+.more2 a:link,.more2 a:visited{color: #0a7ac4;}
+.more2 a:hover,.more2 a:active {color: #9a2d0f;}	
+#partners{
+	width:960px;
+	margin:0 auto;
+	margin-top:15px;
+	border:1px solid #ccc;
+	}	
+
+.title2{
+	width:950px;
+	height:25px;
+	background-color:#0a7ac4;
+	color:#fff;
+	font-size:16px;
+	font-weight:bold;
+	line-height:25px;
+	padding-left: 10px;
+	}
+	
+
+.arrow_left{
+	background:url("../image/icon/arrow_left.png");
+	}
+.arrow_right{
+	background:url("../image/icon/arrow_right.png");
+	}
+.arrow_left , .arrow_right{
+	float:left;
+	width:80px;
+	height:80px;
+	cursor:pointer;
+	background-repeat:no-repeat;
+	background-position:center;
+	}
+.partners_slide	{
+	float:left;
+	position:relative;
+	width:800px;
+	height:80px;
+	overflow:hidden;
+	}	
+.partners_slide ul{
+	position:absolute;
+	width:3000px;
+	}	
+.partners_slide ul li{
+	float:left;
+	width:160px;
+	padding:20px 0;
+	text-align:center;
+	}
+.partners_slide ul li img{
+	width:100px;
+	height:40px;
+	}

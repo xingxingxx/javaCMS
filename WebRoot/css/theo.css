@@ -1,0 +1,78 @@
+@charset "utf-8";
+.search{
+	width:678;
+	margin:20px;
+	font-size:13px;
+	}
+.search1{
+	float:left;
+	width:150px;
+	margin-right:40px;
+	}
+.category{
+	position:relative;
+	line-height:23px;
+	padding-left:20px;
+	border:1px solid #ccc;
+	background-color:rgb(226,226,226);
+	margin-top:8px;
+	}
+.search1 li{
+	line-height:23px;
+	padding-left:20px;
+	}
+.search11{
+	width:147px;
+	position:absolute;
+	border:1px solid #ccc;
+	background-color:#fff;
+	left:0;
+	top:24;
+	color:#505050;
+	display:none;
+	}
+.search11>li{
+	line-height:30px;
+	}
+.search2{
+	float:left;
+	
+}
+.search2 input[type=text]{
+	width:250px;
+	height:20px;
+	margin-top:8px;
+	}
+.search3{
+	float:left;
+	margin-left:10px;
+}
+.btn{
+	width:80px;
+	height:24px;
+	color:#fff;
+	text-align:center;
+	border:0;
+	background-color:rgb(23,113,173);
+	line-height:22px;
+	margin-top:20px;
+	cursor: pointer;
+	}
+.tab{
+	width:678px;
+	margin:30px 20px;
+	margin-top:30px;
+	}
+.tab_title td{
+	background-color:rgb(226,226,226);
+	font-weight:bold;
+	}
+.tab td{
+	height:30px;
+	border:1px solid #ccc;
+	font-size:13px;
+	padding-left:10px;
+	}
+#right a:link,#right a:visited{color: #0a7ac4;}
+#right a:hover, #right a:active {color: #9a2d0f;}
+	

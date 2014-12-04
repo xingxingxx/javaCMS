@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- 定义通用package，封装通用组件 -->
+	<package name="dinstar" 
+		extends="json-default">
+		<interceptors>
+			<!-- 注册登陆检查拦截器 -->
+			<interceptor name="loginInter" 
+				class="interceptor.LoginInterceptor">
+			</interceptor>
+			<!-- 
+				注册登陆检查拦截器栈， 
+				将登陆拦截器和默认拦截器打包。
+			-->
+			<interceptor-stack name="loginStack">
+				<interceptor-ref name="loginInter"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<!-- 指定默认拦截器为登陆检查拦截器栈 -->
+		<default-interceptor-ref name="loginStack"></default-interceptor-ref>
+		<!-- 
+			定义全局result，这里定义的result在
+			当前package下所有Action共用。
+		-->
+		<global-results>
+			<!-- 重定向到登陆Action -->
+			<result name="login" 
+				type="redirectAction">
+				<param name="namespace">/login</param>
+				<param name="actionName">toLogin</param>
+			</result>
+			<!-- 跳转到全局错误页面 -->
+			<result name="error">
+				/WEB-INF/common/error.jsp
+			</result>
+		</global-results>
+	</package>
+</struts>

@@ -1,0 +1,35 @@
+@charset "utf-8";
+.product{
+	width:320px;
+	height:200px;
+	float:left;
+	border:1px solid #ccc;
+	background-color:#fff;
+	margin-left:25px;
+	margin-bottom:25px;
+	}
+.product_img{
+	float:left;
+	margin:45px 10px ;
+	}
+.product_img img{
+	width:100px;
+	height:100px;
+	}
+.product_des{
+	float:left;
+	width:170px;
+	font-size:13px;
+	line-height:22px;
+	word-break:break-all; 
+	overflow:auto;
+}
+.title{
+	font-weight:bold;
+	margin-top:20px;
+	font-size:14px;
+	overflow: hidden;
+	}	
+.more:link,.more:visited{color: #0a7ac4;}
+.more:hover,.more:active {color: #9a2d0f;}
+	

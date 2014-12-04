@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+	<!-- 设置上传文件最大值 -->
+	<constant name="struts.multipart.maxSize" value="50000000"></constant>
+	<!-- 引入通用配置 -->
+	<include file="struts-common.xml"></include>
+	<include file="struts-home-common.xml"></include>	
+	<!-- 引入登录模块 -->
+	<include file="struts-login.xml"></include>
+	<!-- 引入后台和前台模块 -->
+  	<include file="struts-manage.xml"></include>
+    <include file="struts-home.xml"></include>
+</struts>
+

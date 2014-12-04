@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+    
+<struts>
+	<package name="home" namespace="/home"
+		extends="homeCommon" >
+		<action name="index" class="action.oneColumns.FindAllColumnsAction">
+			<result name="success" >
+				/WEB-INF/home/index.jsp
+			</result>
+		</action>
+		<action name="productCenter" class="action.product.FindListProductAction">
+			<result name="success">
+				/WEB-INF/home/product_center.jsp
+			</result>
+		</action>
+		<action name="more" class="action.product.FindByIdProductAction">
+			<result name="success">
+				/WEB-INF/home/more.jsp
+			</result>
+		</action>
+		<action name="text" class="action.text.FindByCategoryAction">
+			<result name="success">
+				/WEB-INF/home/text.jsp
+			</result>
+		</action>
+		<action name="textMore" class="action.text.FindByIdTextAction">
+			<result name="success">
+				/WEB-INF/home/text_more.jsp
+			</result>
+		</action>
+		
+		<action name="page" class="action.text.FindByCategoryAction">
+			<result name="success">
+				/WEB-INF/home/page.jsp
+			</result>
+		</action>
+		<action name="document" class="action.text.FindByCategoryAction">
+			<param name="rows">15</param>
+			<result name="success">
+				/WEB-INF/home/document.jsp
+			</result>
+		</action>
+		<action name="program" class="action.text.FindByCategoryAction">
+			<param name="rows">15</param>
+			<result name="success">
+				/WEB-INF/home/program.jsp
+			</result>
+		</action>
+		<action name="findByNameDoc" class="action.text.FindByNameAction">
+			<param name="rows">15</param>
+			<result name="success">
+				/WEB-INF/home/document.jsp
+			</result>
+		</action>
+		<action name="findByName" class="action.text.FindByNameAction">
+			<param name="rows">15</param>
+			<result name="success">
+				/WEB-INF/home/program.jsp
+			</result>
+		</action>
+		
+		<action name="news" class="action.text.FindByCategoryAction">
+		    <param name="rows">20</param>
+			<result name="success">
+				/WEB-INF/home/news.jsp
+			</result>
+		</action>
+		<action name="userQuestion" class="action.userQuestion.UserQuestionAction">
+			<result name="success">
+				/WEB-INF/home/user_question.jsp
+			</result>
+		</action>
+		<action name="toQuestion" class="action.userQuestion.AddUserQuestionAction">
+			<result name="ok" type="json">
+				<param name="root">errorMsg</param>
+			</result>
+			<result name="fail" type="json">
+				<param name="root">errorMsg</param>
+			</result>
+		</action>
+		<action name="addCoop" class="action.coop.AddCoopAction">
+			<result name="ok" type="json">
+				<param name="root">errorMsg</param>
+			</result>
+			<result name="fail" type="json">
+				<param name="root">errorMsg</param>
+			</result>
+		</action>
+		<action name="downloadFile" class="action.download.DownLoadAction">  
+		    <result name="success" type="stream">  
+		        <!-- MIME类型 -->  
+		        <param name="contentType">application/octet-stream</param>  
+		        <!-- inputName的值与action获取输入流资源的方法名相对应(action中定义getInputStream方法,并且返回类型为InputStream) -->  
+		        <param name="inputName">inputStream</param>  
+		        <!-- 设置带附件的文件 动态获取文件名(action中定义getDownloadFileName方法) -->  
+		        <param name="contentDisposition">attachment;filename="${downloadFileName}"</param>  
+		        <!-- 设置缓冲大小 -->  
+				 <param name="bufferSize">50000000</param>  
+		    </result>  
+		</action>  
+		<action name="downloadFileProduct" class="action.download.DownLoadProductAction">  
+		    <result name="success" type="stream">  
+		        <!-- MIME类型 -->  
+		        <param name="contentType">application/octet-stream</param>  
+		        <!-- inputName的值与action获取输入流资源的方法名相对应(action中定义getInputStream方法,并且返回类型为InputStream) -->  
+		        <param name="inputName">inputStream</param>  
+		        <!-- 设置带附件的文件 动态获取文件名(action中定义getDownloadFileName方法) -->  
+		        <param name="contentDisposition">attachment;filename="${downloadFileName}"</param>  
+		        <!-- 设置缓冲大小 -->  
+				 <param name="bufferSize">50000000</param>  
+		    </result>  
+		</action>
+		<action name="docCenter" class="action.document.FindListDocumentAction">
+			<param name="rows">15</param>
+			<result name="success">
+				/WEB-INF/home/doc_center.jsp
+			</result>
+		</action>
+		<action name="coop" class="action.coop.FindListCoopAction">
+			<param name="rows">15</param>
+			<result name="success">
+				/WEB-INF/home/coop.jsp
+			</result>
+		</action>
+	</package>
+</struts>

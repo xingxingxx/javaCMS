@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+    
+<struts>
+	<package name="cms" namespace="/cms"
+		extends="dinstar">
+		<action name="manage">
+			<result name="success">
+				/WEB-INF/cms/manage.jsp
+			</result>
+		</action>
+		<action name="columns" class="action.columns.FindColumnsAction">
+			<result name="success">
+				/WEB-INF/cms/columns.jsp
+			</result>
+		</action>
+		<action name="toAddOneColumns">
+			<result name="success">
+				/WEB-INF/cms/add_one_columns.jsp
+			</result>
+		</action>
+		<action name="addOneColumns" class="action.columns.AddColumnsAction">
+			<result name="success" type="redirectAction">
+				columns
+			</result>
+		</action>
+		<action name="delOneColumns" class="action.columns.DeleteColumnsAction">
+			<result name="success" type="redirectAction">
+				columns
+			</result>
+		</action>
+		<action name="toUpdateOneColumns" class="action.columns.ToUpdateColumnsAction">
+			<result name="success">
+				/WEB-INF/cms/update_one_columns.jsp
+			</result>
+		</action>
+		<action name="updateOneColumns" class="action.columns.UpdateColumnsAction">
+			<result name="success" type="redirectAction">
+				columns
+			</result>
+		</action>
+		<action name="toAddTwoColumns">
+			<result name="success">
+				/WEB-INF/cms/add_two_columns.jsp
+			</result>
+		</action>
+		<action name="addTwoColumns" class="action.twoColumns.AddTwoColumnsAction">
+			 <result name="success" type="redirectAction">
+      			columns
+   			 </result>
+		</action>
+		<action name="delTwoColumns" class="action.twoColumns.DeleteTwoColumnsAction">
+			 <result name="success" type="redirectAction">
+      			columns
+   			 </result>
+   			 <result name="cannot">
+      			/WEB-INF/common/no.jsp
+   			 </result>
+		</action>
+		<action name="toUpdateTwoColumns" class="action.twoColumns.ToUpdateTwoColumnsAction">
+			 <result name="success">
+				/WEB-INF/cms/update_two_columns.jsp
+			</result>
+		</action>
+		<action name="updateTwoColumns" class="action.twoColumns.UpdateTwoColumnsAction">
+			<result name="success" type="redirectAction">
+				columns
+			</result>
+		</action>
+		<action name="slide" class="action.slide.FindSlideAction">
+			<result name="success">
+				/WEB-INF/cms/slide.jsp
+			</result>
+		</action>
+		<action name="toAddSlide">
+			<result name="success">
+				/WEB-INF/cms/add_slide.jsp
+			</result>
+		</action>
+		<action name="addSlide"
+			class="action.slide.AddSlide">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">50000000</param>
+			</interceptor-ref>
+			<interceptor-ref name="basicStack"></interceptor-ref>
+			<result name="success" type="redirectAction">
+				slide
+			</result>
+		</action>
+		<action name="delSlide" class="action.slide.DeleteSlideAction">
+			<result name="success" type="redirectAction">
+				slide
+			</result>
+		</action>
+		<action name="toUpdateSlide" class="action.slide.ToUpdateSlideAction">
+			 <result name="success">
+				/WEB-INF/cms/update_slide.jsp
+			</result>
+		</action>
+		<action name="updateSlide" class="action.slide.UpdateSlideAction">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">50000000</param>
+			</interceptor-ref>
+			<interceptor-ref name="basicStack"></interceptor-ref>
+			<result name="success" type="redirectAction">
+				slide
+			</result>
+		</action>
+		<action name="partners" class="action.partners.FindPartnersAction">
+			<result name="success">
+				/WEB-INF/cms/partners.jsp
+			</result>
+		</action>
+		<action name="toAddPartners">
+			<result name="success">
+				/WEB-INF/cms/add_partners.jsp
+			</result>
+		</action>
+		<action name="addPartners"
+			class="action.partners.AddPartners">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">50000000</param>
+			</interceptor-ref>
+			<interceptor-ref name="basicStack"></interceptor-ref>
+			<result name="success" type="redirectAction">
+				partners
+			</result>
+		</action>
+		<action name="toUpdatePartners" class="action.partners.ToUpdatePartnersAction">
+			 <result name="success">
+				/WEB-INF/cms/update_partners.jsp
+			</result>
+		</action>
+		<action name="updatePartners" class="action.partners.UpdatePartnersAction">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">50000000</param>
+			</interceptor-ref>
+			<interceptor-ref name="basicStack"></interceptor-ref>
+			<result name="success" type="redirectAction">
+				partners
+			</result>
+		</action>
+		<action name="delPartners" class="action.partners.DeletePartnersAction">
+			 <result name="success" type="redirectAction">
+				partners
+			</result>
+		</action>
+		<action name="category" class="action.pcategory.FindPcategoryAction">
+			<result name="success">
+				/WEB-INF/cms/category.jsp
+			</result>
+		</action>
+		<action name="toAddCategory">
+			<result name="success">
+				/WEB-INF/cms/add_category.jsp
+			</result>
+		</action>
+		<action name="addCategory" class="action.pcategory.AddPcategoryAction">
+			 <result name="success" type="redirectAction">
+      			category
+   			 </result>
+		</action>
+		<action name="delCategory" class="action.pcategory.DeletePcategoryAction">
+			 <result name="success" type="redirectAction">
+      			category
+   			 </result>
+		</action>
+		<action name="toUpdateCategory" class="action.pcategory.ToUpdatePcategoryAction">
+			<result name="success">
+				/WEB-INF/cms/update_category.jsp
+			</result>
+		</action>
+		<action name="updateCategory" class="action.pcategory.UpdatePcategoryAction">
+			 <result name="success" type="redirectAction">
+      			category
+   			 </result>
+		</action>
+		<action name="product" class="action.product.FindProductAction">
+			<result name="success">
+				/WEB-INF/cms/product.jsp
+			</result>
+		</action>
+		<action name="toAddProduct" class="action.product.FindCategoryAction">
+			<result name="success">
+				/WEB-INF/cms/add_product.jsp
+			</result>
+		</action>
+		<action name="addProduct" class="action.product.AddProductAction">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">50000000</param>
+			</interceptor-ref>
+			<interceptor-ref name="basicStack"></interceptor-ref>
+			<result name="success" type="redirectAction">
+				product
+			</result>
+		</action>
+		<action name="delProduct" class="action.product.DeleteProductAction">
+			<result name="success" type="redirectAction" >
+				product
+			</result>
+		</action>
+		<action name="toUpdateProduct" class="action.product.ToUpdateProductAction">
+			<result name="success">
+				/WEB-INF/cms/update_product.jsp
+			</result>
+		</action>
+		<action name="updateProduct" class="action.product.UpdateProductAction">
+			 <result name="success" type="redirectAction">
+      			product
+   			 </result>
+		</action>
+		<action name="moreProduct" class="action.product.MoreProductAction">
+			 <result name="success">
+      			/WEB-INF/cms/more_product.jsp
+   			 </result>
+		</action>
+		<action name="text" class="action.text.FindTextAction">
+			<result name="success">
+				/WEB-INF/cms/text.jsp
+			</result>
+		</action>
+		<action name="toAddText">
+			<result name="success">
+				/WEB-INF/cms/add_text.jsp
+			</result>
+		</action>
+		<action name="addText" class="action.text.AddTextAction">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">50000000</param>
+			</interceptor-ref>
+			<interceptor-ref name="basicStack"></interceptor-ref>
+			<result name="success" type="redirectAction">
+				 <param name="actionName">text</param>
+      			 <param name="categoryId">${categoryId}</param>
+				
+			</result>
+		</action>
+		<action name="delText" class="action.text.DeleteTextAction">
+			 <result name="success" type="redirectAction">
+      			<param name="actionName">text</param>
+      			 <param name="categoryId">${categoryId}</param>
+   			 </result>
+		</action>
+			<action name="toUpdateText" class="action.text.ToUpdateTextAction">
+			<result name="success">
+				/WEB-INF/cms/update_text.jsp
+			</result>
+		</action>
+		<action name="updateText" class="action.text.UpdateTextAction">
+			 <result name="success" type="redirectAction">
+      			<param name="actionName">text</param>
+      			 <param name="categoryId">${categoryId}</param>
+   			 </result>
+		</action>
+		<action name="moreText" class="action.text.MoreTextAction">
+			 <result name="success">
+      			/WEB-INF/cms/more_text.jsp
+   			 </result>
+		</action>
+		<action name="question" class="action.userQuestion.FindUserQuestionAction">
+			<result name="success">
+				/WEB-INF/cms/question.jsp
+			</result>
+		</action>
+			<action name="delQuestion" class="action.userQuestion.DeleteUserQuestionAction">
+			 <result name="success" type="redirectAction">
+      			question
+   			 </result>
+		</action>
+		<action name="toAnswer" class="action.userQuestion.AnswerAction">
+			<result name="success">
+				/WEB-INF/cms/answer.jsp
+			</result>
+		</action>
+		<action name="answer" class="action.adminAnswer.AnswerQuestionAction">
+			 <result name="success" type="redirectAction">
+      			question
+   			 </result>
+		</action>
+		<action name="admin" class="action.admin.FindAdminAction">
+			<result name="success">
+				/WEB-INF/cms/admin.jsp
+			</result>
+		</action>
+		<action name="toAddAdmin">
+			<result name="success">
+				/WEB-INF/cms/add_admin.jsp
+			</result>
+		</action>
+		<action name="addAdmin" class="action.admin.AddAdminAction">
+			 <result name="success" type="redirectAction">
+      			admin
+   			 </result>
+		</action>
+		<action name="delAdmin" class="action.admin.DeleteAdminAction">
+			 <result name="success" type="redirectAction">
+      			admin
+   			 </result>
+		</action>
+		<action name="toUpdatePassword">
+			<result name="success">
+				/WEB-INF/cms/password.jsp
+			</result>
+		</action>
+		<action name="updatePassword" class="action.admin.UpdatePasswordAction">
+			 <result name="ok" type="redirectAction">
+      			admin
+   			 </result>
+   			 <result name="fail">
+      			/WEB-INF/cms/password.jsp
+   			 </result>
+		</action>
+		<action name="loginOut" class="action.login.LoginOutAction">
+			<result name="success" type="redirectAction">
+				<param name="namespace">/login</param>
+				<param name="actionName">toLogin</param>
+			</result>
+		</action>
+		<action name="docCategory" class="action.docCategory.FindDocCategoryAction">
+			<result name="success">
+				/WEB-INF/cms/doc_category.jsp
+			</result>
+		</action>
+		<action name="toAddDocCategory">
+			<result name="success">
+				/WEB-INF/cms/add_doc_category.jsp
+			</result>
+		</action>
+		<action name="addDocCategory" class="action.docCategory.AddDocCategoryAction">
+			 <result name="success" type="redirectAction">
+      			docCategory
+   			 </result>
+		</action>
+		<action name="delDocCategory" class="action.docCategory.DeleteDocCategoryAction">
+			 <result name="success" type="redirectAction">
+      			docCategory
+   			 </result>
+		</action>
+		<action name="toUpdateDocCategory" class="action.docCategory.ToUpdateDocCategoryAction">
+			<result name="success">
+				/WEB-INF/cms/update_doc_category.jsp
+			</result>
+		</action>
+		<action name="updateDocCategory" class="action.docCategory.UpdateDocCategoryAction">
+			 <result name="success" type="redirectAction">
+      			docCategory
+   			 </result>
+		</action>
+		<action name="document" class="action.document.FindDocumentAction">
+			<result name="success">
+				/WEB-INF/cms/document.jsp
+			</result>
+		</action>
+		<action name="toAddDocument">
+			<result name="success">
+				/WEB-INF/cms/add_document.jsp
+			</result>
+		</action>
+		<action name="addDocument" class="action.document.AddDocumentAction">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">50000000</param>
+			</interceptor-ref>
+			<interceptor-ref name="basicStack"></interceptor-ref>
+			<result name="success" type="redirectAction">
+				 <param name="actionName">document</param>
+      			 <param name="id">${categoryId}</param>
+				
+			</result>
+		</action>
+		<action name="delDocument" class="action.document.DeleteDocumentAction">
+			 <result name="success" type="redirectAction">
+      			<param name="actionName">document</param>
+      			 <param name="id">${categoryId}</param>
+   			 </result>
+		</action>
+			<action name="toUpdateDocument" class="action.document.ToUpdateDocumentAction">
+			<result name="success">
+				/WEB-INF/cms/update_document.jsp
+			</result>
+		</action>
+		<action name="updateDocument" class="action.document.UpdateDocumentAction">
+			 <result name="success" type="redirectAction">
+      			<param name="actionName">document</param>
+      			 <param name="id">${categoryId}</param>
+   			 </result>
+		</action>
+		<action name="coop" class="action.coop.FindCoopAction">
+			<result name="success">
+				/WEB-INF/cms/coop.jsp
+			</result>
+		</action>
+		<action name="moreCoop" class="action.coop.FindByIdCoopAction">
+			<result name="success">
+				/WEB-INF/cms/more_coop.jsp
+			</result>
+		</action>
+		<action name="delCoop" class="action.coop.DeleteCoopAction">
+			<result name="success" type="redirectAction">
+				coop
+			</result>
+		</action>
+	</package>
+	
+</struts>

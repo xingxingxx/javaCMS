@@ -1,0 +1,10 @@
+@charset "utf-8";
+.news{
+	width:678px;
+	margin:20px;
+	}
+.news>li{
+	font-size:13px;
+	line-height:35px;
+	border-bottom:1px solid #ccc;
+	}

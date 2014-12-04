@@ -1,0 +1,184 @@
+@charset "utf-8";
+/*
+*重置浏览器默认样式
+*/
+html{color:#505050;background:#fafafa;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+/* 设置默认字体 */
+body,button, input, select, textarea {
+    font: 13px/1 微软雅黑, Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+/*设置超链接默认样式*/
+a{text-decoration: none;}
+a:link,a:visited{color: #505050;}
+a:hover, a:active {color: red;}
+
+#left{
+	float:left;
+}
+.menu{
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+.header{
+	font-size:18px !important;
+	font-weight:bold;
+	line-height:55px !important;
+	background-color: #ccc;
+}
+.menu li{
+	font-size:16px;
+	line-height:40px;
+	width:150px;
+	padding-left:30px;
+	border-bottom:1px solid #ccc;
+}
+#right{
+	margin-top:20px;
+	margin-left:200px;
+	margin-bottom: 50px;
+}
+
+.title{
+	background-color: #eee;
+	font-weight: bold;
+}
+
+.tab td{
+	line-height:40px;
+	padding-left:10px;
+	border:1px solid #ccc;
+	vertical-align: top;
+}
+.tab2 td{
+	line-height:30px;
+	padding-left:10px;
+	vertical-align: top;
+	border:0;
+}
+.add-icon,.del-icon,.editor-icon,
+	.down-icon,.column-icon,.home-icon,
+	.menu-icon,.slide-icon,.content-icon
+	,.question-icon,.admin-icon,.close-icon
+	,.open-icon{
+	display:inline-block;
+	vertical-align:middle;
+	width:15px;
+	height:15px;
+	background-image: url("../image/icon/ui.png");
+	background-repeat: no-repeat;
+}
+.add-icon{
+	background-position: 14% 58%;
+}
+.del-icon{
+	background-position: 74% 43%;
+}
+.editor-icon{
+	background-position: right 43%;
+}
+.down-icon{
+	background-position: 26% 8%;
+}
+.column-icon{
+	margin-left:20px;
+	background-position: 14% 43%;
+}
+.home-icon{
+	background-position: left 50%;
+}
+.menu-icon{
+	background-position: 14% 50%;
+}
+.slide-icon{
+	background-position: 87% 57%;
+}
+.content-icon{
+	background-position: 14% 43%;
+}
+.question-icon{
+	background-position: 53% 43%;
+}
+.admin-icon{
+	background-position: 60% 43%;
+}
+.open-icon{
+	background-position: 8% 58%;
+}
+.close-icon{
+	background-position: 20% 58%;
+}
+
+.tab-fm td{
+	padding:10px;
+}
+.tab-fm input[type=text],.tab-fm input[type=password]{
+	width:200px;
+	height:25px;
+	line-height:25px;
+	border:1px solid #ccc;
+}
+.tab-fm input[type=file]{
+	width:200px;
+	height:27px;
+	line-height:27px;
+	margin-top:5px;
+	border:0;
+	background-color: #eee;
+}
+.tab-fm select{
+	width:200px;
+	height:30px;
+	line-height:30px;
+	border:1px solid #ccc;
+}
+.tab-fm textarea{
+	width:600px;
+	height:200px;
+	border:1px solid #ccc;
+}
+
+.btn-ok,.btn-cancel{
+	color:#505050;
+	background-color:#eee;
+	border:1px solid #ccc;
+	height:30px;
+}
+.btn-ok{
+	width:80px;
+}
+.btn-cancel{
+	margin-left:10px;
+	width:60px;
+}
+.pageClass{
+	margin:10px auto;
+	text-align: center;
+}
+.onPage{
+	background-color:#eee !important;
+	color:#000 !important;
+}
+.pageClass a{
+	display:inline-block;
+	width:45px;
+	line-height:25px;
+	text-align:center;
+	color:#505050;
+	margin:0 !important;
+	background:#fafafa;
+}

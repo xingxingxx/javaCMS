@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+	<tlib-version>1.1</tlib-version>
+	<short-name>page</short-name>
+	<uri>http://www.tarena.com.cn/page_tag</uri>
+	<tag>
+		<name>paging</name>
+		<tag-class>util.PageTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>page</name>
+			<!--  必须标签 	-->
+			<required>true</required>
+			<!-- 值为true,可以使用el表达式赋值 -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>totalPage</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>href</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>class_name</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>
